@@ -18,8 +18,6 @@ public class joinLeaveListener implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
         e.setJoinMessage(p.getDisplayName() + " is ready to" + ChatColor.RED +" Slice!");
-        Audience audience = (Audience) p;
-        String data = plugin.getConfig().getString("default-notice");
         if(!e.getPlayer().hasPlayedBefore()){
             Location location = plugin.getConfig().getLocation("spawn");
             if(location != null){
