@@ -1,4 +1,4 @@
-package com.malcolmjh.slicerstaffcommands.utils;
+package net.antlertech.slicerstaffcommands.utils;
 import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.text.Component;
 import org.checkerframework.checker.nullness.qual.NonNull;

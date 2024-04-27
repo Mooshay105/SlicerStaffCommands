@@ -1,5 +1,5 @@
-package com.malcolmjh.slicerstaffcommands.listeners;
-import com.malcolmjh.slicerstaffcommands.SlicerStaffCommands;
+package net.antlertech.slicerstaffcommands.listeners;
+import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

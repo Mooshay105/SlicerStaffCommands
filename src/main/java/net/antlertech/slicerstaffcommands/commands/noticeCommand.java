@@ -1,5 +1,5 @@
-package com.malcolmjh.slicerstaffcommands.commands;
-import com.malcolmjh.slicerstaffcommands.SlicerStaffCommands;
+package net.antlertech.slicerstaffcommands.commands;
+import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

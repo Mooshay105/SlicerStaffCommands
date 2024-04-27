@@ -1,6 +1,6 @@
 name: SlicerStaffCommands
 version: '${project.version}'
-main: com.malcolmjh.slicerstaffcommands.SlicerStaffCommands
+main: net.antlertech.slicerstaffcommands.SlicerStaffCommands
 api-version: '1.20'
 commands:
   hologram:

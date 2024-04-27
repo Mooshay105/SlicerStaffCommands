@@ -1,5 +1,5 @@
-package com.malcolmjh.slicerstaffcommands.commands;
-import com.malcolmjh.slicerstaffcommands.utils.makeArmorStand;
+package net.antlertech.slicerstaffcommands.commands;
+import net.antlertech.slicerstaffcommands.utils.makeArmorStand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

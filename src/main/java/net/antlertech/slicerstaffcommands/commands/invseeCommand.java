@@ -1,4 +1,4 @@
-package com.malcolmjh.slicerstaffcommands.commands;
+package net.antlertech.slicerstaffcommands.commands;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

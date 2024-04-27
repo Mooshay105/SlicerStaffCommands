@@ -1,6 +1,6 @@
-package com.malcolmjh.slicerstaffcommands.listeners;
-import com.malcolmjh.slicerstaffcommands.SlicerStaffCommands;
-import com.malcolmjh.slicerstaffcommands.utils.showBossBar;
+package net.antlertech.slicerstaffcommands.listeners;
+import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
+import net.antlertech.slicerstaffcommands.utils.showBossBar;
 import net.kyori.adventure.audience.Audience;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;

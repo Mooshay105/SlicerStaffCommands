@@ -1,11 +1,11 @@
-package com.malcolmjh.slicerstaffcommands;
-import com.malcolmjh.slicerstaffcommands.commands.hologramCommand;
-import com.malcolmjh.slicerstaffcommands.commands.invseeCommand;
-import com.malcolmjh.slicerstaffcommands.commands.noticeCommand;
-import com.malcolmjh.slicerstaffcommands.commands.spawnCommand;
-import com.malcolmjh.slicerstaffcommands.commands.setSpawnCommand;
-import com.malcolmjh.slicerstaffcommands.listeners.joinLeaveListener;
-import com.malcolmjh.slicerstaffcommands.listeners.spawnListener;
+package net.antlertech.slicerstaffcommands;
+import net.antlertech.slicerstaffcommands.commands.hologramCommand;
+import net.antlertech.slicerstaffcommands.commands.invseeCommand;
+import net.antlertech.slicerstaffcommands.commands.noticeCommand;
+import net.antlertech.slicerstaffcommands.commands.spawnCommand;
+import net.antlertech.slicerstaffcommands.commands.setSpawnCommand;
+import net.antlertech.slicerstaffcommands.listeners.joinLeaveListener;
+import net.antlertech.slicerstaffcommands.listeners.spawnListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SlicerStaffCommands extends JavaPlugin {
