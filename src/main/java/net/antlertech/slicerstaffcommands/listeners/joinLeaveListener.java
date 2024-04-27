@@ -1,6 +1,5 @@
 package net.antlertech.slicerstaffcommands.listeners;
 import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
-import net.kyori.adventure.audience.Audience;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
