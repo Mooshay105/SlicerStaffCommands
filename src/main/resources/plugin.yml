@@ -13,10 +13,6 @@ commands:
     description: Lets you see in someones inventory.
     permission-message: You need to be a staff member to use this command
     permission: slicer.staff.invsee
-  notice:
-    usage: /<command> <username>
-    permission-message: Unknown command. Type "/help" for help.
-    permission: slicer.staff.notice
   setspawn:
     description: Set the spawn point
     permission: slicer.staff.setspawn

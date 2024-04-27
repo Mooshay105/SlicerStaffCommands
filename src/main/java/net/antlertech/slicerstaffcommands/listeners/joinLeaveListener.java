@@ -1,6 +1,5 @@
 package net.antlertech.slicerstaffcommands.listeners;
 import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
-import net.antlertech.slicerstaffcommands.utils.showBossBar;
 import net.kyori.adventure.audience.Audience;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -27,7 +26,6 @@ public class joinLeaveListener implements Listener {
                 e.getPlayer().teleport(location);
             }
         }
-        new showBossBar(data, 1, net.kyori.adventure.bossbar.BossBar.Color.RED, net.kyori.adventure.bossbar.BossBar.Overlay.NOTCHED_6, audience);
     }
     @EventHandler
     public void onLeave(PlayerQuitEvent e) {

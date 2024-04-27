@@ -1,7 +1,6 @@
 package net.antlertech.slicerstaffcommands;
 import net.antlertech.slicerstaffcommands.commands.hologramCommand;
 import net.antlertech.slicerstaffcommands.commands.invseeCommand;
-import net.antlertech.slicerstaffcommands.commands.noticeCommand;
 import net.antlertech.slicerstaffcommands.commands.spawnCommand;
 import net.antlertech.slicerstaffcommands.commands.setSpawnCommand;
 import net.antlertech.slicerstaffcommands.listeners.joinLeaveListener;
@@ -15,7 +14,6 @@ public final class SlicerStaffCommands extends JavaPlugin {
         saveDefaultConfig();
         getCommand("hologram").setExecutor(new hologramCommand());
         getCommand("invsee").setExecutor(new invseeCommand());
-        getCommand("notice").setExecutor(new noticeCommand(this));
         getCommand("setspawn").setExecutor(new setSpawnCommand(this));
         getCommand("spawn").setExecutor(new spawnCommand(this));
         getServer().getPluginManager().registerEvents(new spawnListener(this), this);
