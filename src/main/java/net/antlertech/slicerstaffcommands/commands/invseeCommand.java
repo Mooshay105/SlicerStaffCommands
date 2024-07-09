@@ -7,15 +7,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import net.antlertech.slicerstaffcommands.messages;
+import org.jetbrains.annotations.NotNull;
 
 public class invseeCommand implements CommandExecutor {
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if (sender instanceof Player) {
             Player p = (Player) sender;
             StringBuilder builder = new StringBuilder();
-            for(int i = 0; i < args.length; i++) {
-                builder.append(args[i]);
+            for (String arg : args) {
+                builder.append(arg);
                 builder.append(" ");
             }
             String invTargets = builder.toString();

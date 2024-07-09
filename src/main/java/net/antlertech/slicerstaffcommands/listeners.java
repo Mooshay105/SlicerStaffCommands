@@ -17,6 +17,7 @@ public class listeners implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
         String message = plugin.getConfig().getString("Join-Message");
+        assert message != null;
         e.setJoinMessage(message.replace("[Player]", p.getDisplayName()));
         if(!e.getPlayer().hasPlayedBefore()){
             Location location = plugin.getConfig().getLocation("spawn");
@@ -29,6 +30,7 @@ public class listeners implements Listener {
     public void onLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
         String message = plugin.getConfig().getString("Quit-Message");
+        assert message != null;
         e.setQuitMessage(message.replace("[Player]", p.getDisplayName()));
     }
     @EventHandler
