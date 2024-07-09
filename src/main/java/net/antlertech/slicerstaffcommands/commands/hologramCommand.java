@@ -1,10 +1,11 @@
 package net.antlertech.slicerstaffcommands.commands;
 
-import net.antlertech.slicerstaffcommands.utils.makeArmorStand;
+import net.antlertech.slicerstaffcommands.makeArmorStand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import net.antlertech.slicerstaffcommands.messages;
 
 public class hologramCommand implements CommandExecutor {
     @Override
@@ -13,7 +14,7 @@ public class hologramCommand implements CommandExecutor {
             Player player = (Player) sender;
             makeArmorStand.spawn(player, args);
         } else {
-            System.out.println("You Must Be in-game to use /hologram");
+            System.out.println(messages.getConsoleMessage());
         }
         return true;
     }
