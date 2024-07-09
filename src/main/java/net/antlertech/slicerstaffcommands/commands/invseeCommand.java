@@ -1,10 +1,13 @@
 package net.antlertech.slicerstaffcommands.commands;
+
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+
 public class invseeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -17,11 +20,19 @@ public class invseeCommand implements CommandExecutor {
             }
             String invTargets = builder.toString();
             invTargets = invTargets.stripTrailing();
-            Player invTarget = Bukkit.getServer().getPlayer(invTargets);
+            Player invTarget = Bukkit.getServer().getPlayerExact(invTargets);
+            if (invTarget == null) {
+                sender.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "HEY!" + ChatColor.GRAY + " That player is not online!");
+                return true;
+            }
+            if (invTarget == p) {
+                sender.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "HEY!" + ChatColor.GRAY + " You can not use /invsee on yourself!");
+                return true;
+            }
             Inventory targetInventory = invTarget.getInventory();
             p.openInventory(targetInventory);
         } else {
-            return false;
+            sender.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "HEY!" + ChatColor.GRAY + " You must be a player to use this command.");
         }
         return true;
     }

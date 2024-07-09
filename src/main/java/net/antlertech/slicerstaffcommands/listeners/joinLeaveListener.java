@@ -1,6 +1,6 @@
 package net.antlertech.slicerstaffcommands.listeners;
+
 import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,7 +16,8 @@ public class joinLeaveListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        e.setJoinMessage(p.getDisplayName() + " is ready to" + ChatColor.RED +" Slice!");
+        String message = plugin.getConfig().getString("Join-Message");
+        e.setJoinMessage(message.replace("[Player]", p.getDisplayName()));
         if(!e.getPlayer().hasPlayedBefore()){
             Location location = plugin.getConfig().getLocation("spawn");
             if(location != null){
@@ -27,6 +28,7 @@ public class joinLeaveListener implements Listener {
     @EventHandler
     public void onLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
-        e.setQuitMessage(p.getDisplayName() + " is no longer " + ChatColor.RED + "Slicing!");
+        String message = plugin.getConfig().getString("Quit-Message");
+        e.setQuitMessage(message.replace("[Player]", p.getDisplayName()));
     }
 }

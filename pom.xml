@@ -6,7 +6,7 @@
 
     <groupId>net.antlertech</groupId>
     <artifactId>SlicerStaffCommands</artifactId>
-    <version>1.1.1</version>
+    <version>1.21-Arctic-Aardvark</version>
     <packaging>jar</packaging>
 
     <name>SlicerStaffCommands</name>

@@ -1,3 +1,5 @@
 spawn-location:
-# Comming Soon!
-remakeTheSpawnSystem: true
+
+Join-Message: '[Player] is ready to Slice!'
+
+Quit-Message: '[Player] is no longer Slicing!'

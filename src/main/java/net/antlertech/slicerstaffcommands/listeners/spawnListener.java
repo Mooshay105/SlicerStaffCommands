@@ -1,4 +1,5 @@
 package net.antlertech.slicerstaffcommands.listeners;
+
 import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;

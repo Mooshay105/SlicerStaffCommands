@@ -1,5 +1,7 @@
 package net.antlertech.slicerstaffcommands.commands;
+
 import net.antlertech.slicerstaffcommands.SlicerStaffCommands;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -18,12 +20,12 @@ public class spawnCommand implements CommandExecutor {
             Location location = plugin.getConfig().getLocation("spawn");
             if (location != null){
                 player.teleport(location);
-                player.sendMessage("You have been teleported to the spawn point.");
+                player.sendMessage(ChatColor.GREEN + "" + ChatColor.BOLD + "HEY!" + ChatColor.GRAY + " You have been teleported to the spawn point!");
             }else{
-                player.sendMessage("There is no spawn point set.");
+                player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "HEY!" + ChatColor.GRAY + " There is no spawn point set!");
             }
         }else{
-            System.out.println("You Need To Be On The Server To Run This Command!");
+            sender.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "HEY!" + ChatColor.GRAY + " You must be a player to use this command!");
         }
         return true;
     }
