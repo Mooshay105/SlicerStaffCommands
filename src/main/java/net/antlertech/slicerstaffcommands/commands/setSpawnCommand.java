@@ -17,12 +17,15 @@ public class setSpawnCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player){
-            Player player = (Player) sender;
-            Location location = player.getLocation();
-            plugin.getConfig().set("spawn", location);
-            plugin.saveConfig();
-            player.sendMessage(messages.getPlayerSetTheSpawnMessage());
-        }else{
+            Player p = (Player) sender;
+            if (p.hasPermission("slicer.staff.setspawn")) {
+                plugin.getConfig().set("spawn", p.getLocation());
+                plugin.saveConfig();
+                p.sendMessage(messages.getPlayerSetTheSpawnMessage());
+            } else {
+                sender.sendMessage(messages.getNoPermissionMessage());
+            }
+        } else {
             sender.sendMessage(messages.getConsoleMessage());
         }
         return true;

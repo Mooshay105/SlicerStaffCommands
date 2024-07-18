@@ -3,14 +3,14 @@ version: '${project.version}'
 main: net.antlertech.slicerstaffcommands.SlicerStaffCommands
 api-version: '1.21'
 commands:
-  hologram:
-    usage: /<command> <color ID><text>
-    description: Makes a invisable armor stand with the name you gave it and the color if the color ID you provided.
-    permission: slicer.staff.holo
   invsee:
     usage: /<command> <username>
     description: Lets you see in someones inventory.
     permission: slicer.staff.invsee
+  endsee:
+    usage: /<command> <username>
+    description: Lets you see in someones ender chest.
+    permission: slicer.staff.endsee
   setspawn:
     usage: /<command>
     description: Set the spawn point
@@ -18,8 +18,4 @@ commands:
   spawn:
     usage: /<command>
     description: Teleport a player at the spawn location
-    permission: slicer.spawn.spawn
-  endsee:
-    usage: /<command> <username>
-    description: Lets you see in someones ender chest.
-    permission: slicer.staff.endsee
+    permission: slicer.users.spawn

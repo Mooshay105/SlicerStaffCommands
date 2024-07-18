@@ -14,24 +14,25 @@ public class invseeCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if (sender instanceof Player) {
             Player p = (Player) sender;
-            StringBuilder builder = new StringBuilder();
-            for (String arg : args) {
-                builder.append(arg);
-                builder.append(" ");
+            if (p.hasPermission("slicer.staff.invsee")) {
+                StringBuilder builder = new StringBuilder();
+                for (String arg : args) {
+                    builder.append(arg);
+                    builder.append(" ");
+                }
+                Player invTarget = Bukkit.getServer().getPlayerExact(builder.toString().stripTrailing());
+                if (invTarget == null) {
+                    sender.sendMessage(messages.getPlayerNotOnlineMessage());
+                    return true;
+                }
+                if (invTarget == p) {
+                    sender.sendMessage(messages.getCanNotInvseeSlefMessage());
+                    return true;
+                }
+                p.openInventory(invTarget.getInventory());
+            } else {
+                sender.sendMessage(messages.getNoPermissionMessage());
             }
-            String invTargets = builder.toString();
-            invTargets = invTargets.stripTrailing();
-            Player invTarget = Bukkit.getServer().getPlayerExact(invTargets);
-            if (invTarget == null) {
-                sender.sendMessage(messages.getPlayerNotOnlineMessage());
-                return true;
-            }
-            if (invTarget == p) {
-                sender.sendMessage(messages.getCanNotInvseeSlefMessage());
-                return true;
-            }
-            Inventory targetInventory = invTarget.getInventory();
-            p.openInventory(targetInventory);
         } else {
             sender.sendMessage(messages.getConsoleMessage());
         }
